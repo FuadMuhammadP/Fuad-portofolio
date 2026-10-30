@@ -2,6 +2,15 @@
 // Fuad Portfolio — Main JS
 // ==========================================================
 
+// Pastikan saat halaman dibuka/di-refresh selalu mulai dari paling atas (Profile)
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+if (window.location.hash) {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+window.scrollTo(0, 0);
+
 // ---------- Toggle menu mobile ----------
 const toggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
