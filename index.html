@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuad Muhammad Pamungkas — Backend Web Developer & IT Business Analyst</title>
+  <meta name="description" content="Portfolio Fuad: Backend-Focused Web Developer & IT Business Analyst. Database architecture, business process analysis, and backend solutions." />
+
+  <!-- Preload font utama agar heading tidak "berkedip" -->
+  <link rel="preload" href="assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- CSS hasil build Tailwind (sumber: assets/css/input.css) -->
+  <link rel="stylesheet" href="assets/css/output.css" />
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased selection:bg-ink selection:text-paper">
+
+  <!-- ================= NAVBAR (sticky) ================= -->
+  <header class="sticky top-0 z-50 border-b border-ink/10 bg-paper/80 backdrop-blur-md">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-10">
+      <a href="#profile" id="nav-logo" class="text-sm font-semibold tracking-tight">
+        Fuad Muhammad Pamungkas<span class="text-ink/40">.</span>
+      </a>
+
+      <!-- Desktop menu -->
+      <ul id="desktop-nav" class="relative hidden items-center gap-10 md:flex">
+        <li><a href="#profile"    id="nav-profile"    class="nav-link is-active">Profile</a></li>
+        <li><a href="#experience" id="nav-experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills"     id="nav-skills"     class="nav-link">Skills</a></li>
+        <li><a href="#projects"   id="nav-projects"   class="nav-link">Projects</a></li>
+        <li><a href="#contact"    id="nav-contact"    class="nav-link">Contact</a></li>
+        <span id="nav-indicator" class="nav-indicator" aria-hidden="true"></span>
+      </ul>
+
+      <!-- Mobile toggle -->
+      <button id="menu-toggle" class="md:hidden font-mono text-xs uppercase tracking-widest" aria-label="Buka menu" aria-expanded="false">
+        Menu
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <ul id="mobile-menu" class="hidden border-t border-ink/10 px-6 py-6 md:hidden">
+      <li><a href="#profile"    class="nav-link block py-2">Profile</a></li>
+      <li><a href="#experience" class="nav-link block py-2">Experience</a></li>
+      <li><a href="#skills"     class="nav-link block py-2">Skills</a></li>
+      <li><a href="#projects"   class="nav-link block py-2">Projects</a></li>
+      <li><a href="#contact"    class="nav-link block py-2">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- ================= 01. PROFILE ================= -->
+    <section id="profile" class="section items-center">
+      <div class="section-inner">
+        <p class="section-label">01 — Profile</p>
+
+        <div class="mt-12 grid items-center gap-16 md:grid-cols-12 md:gap-12">
+          <!-- Teks (kiri) -->
+          <div class="md:col-span-7">
+            <h1 class="text-5xl font-semibold leading-[1.02] tracking-tighter md:text-7xl lg:text-8xl">
+              Hi, I'm Fuad.
+            </h1>
+            <p class="mt-8 max-w-xl text-2xl font-medium leading-snug tracking-tight text-ink/40 md:text-3xl">
+              Backend-Focused Web Developer &amp; IT Business Analyst.
+            </p>
+            <p class="mt-8 max-w-lg text-lg leading-relaxed text-ink/60">
+              A recent Information Systems graduate from UPN Veteran Jakarta, specializing in building efficient database architectures, analyzing business processes, and delivering robust backend solutions.
+            </p>
+            <div class="mt-12 flex flex-wrap gap-4">
+              <a href="#projects" id="cta-projects" class="btn-primary">View Projects</a>
+              <a href="#contact"  id="cta-contact"  class="btn-ghost">Get in Touch</a>
+            </div>
+          </div>
+
+          <!-- Foto (kanan) -->
+          <div class="md:col-span-5">
+            <figure>
+              <div class="frame aspect-[4/5]">
+                <img src="assets/images/Profile.JPG" alt="Portrait of Fuad Muhammad Pamungkas"
+                     fetchpriority="high" />
+              </div>
+              <figcaption class="caption flex justify-between">
+                <span>Fuad Muhammad Pamungkas</span>
+                <span>Indonesia</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02. EXPERIENCE ================= -->
+    <section id="experience" class="section">
+      <div class="section-inner">
+        <p class="section-label">02 — Experience</p>
+
+        <!-- Teks: judul (kiri) + poin pekerjaan (kanan) -->
+        <div class="mt-12 grid gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <p class="font-mono text-xs uppercase tracking-widest text-ink/50">PPM Manajemen</p>
+            <h2 class="section-title !mt-4">IT Business Partner</h2>
+            <p class="mt-3 font-mono text-sm tracking-wide text-ink/50">Intern · March – July 2025</p>
+
+            <div class="mt-8 flex flex-wrap gap-2">
+              <span class="chip">PHP</span>
+              <span class="chip">CodeIgniter 3</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">MVC</span>
+              <span class="chip">AJAX</span>
+              <span class="chip">jQuery</span>
+              <span class="chip">Bootstrap</span>
+            </div>
+
+            <a href="https://docs.google.com/document/d/1tpYmviKTsNQphHHwvbxTBioYOxp1sD6qHFY6xAyoYiY/edit?usp=sharing"
+               target="_blank" rel="noopener noreferrer" id="btn-simas-detail" class="btn-ghost mt-10 gap-3">
+              View Full Case Study <span aria-hidden="true" class="arrow">↗</span>
+            </a>
+          </div>
+
+          <ul class="border-t border-ink/10 lg:col-span-7">
+            <li class="grid grid-cols-[2.5rem_1fr] border-b border-ink/10 py-6">
+              <span class="font-mono text-xs text-ink/40 pt-1">01</span>
+              <p class="leading-relaxed text-ink/70">
+                Analyzed existing systems to separate proactive (Pre-Add/Proposal) and responsive (Standard/Tender)
+                workflows, translating them into a structured relational database architecture.
+              </p>
+            </li>
+            <li class="grid grid-cols-[2.5rem_1fr] border-b border-ink/10 py-6">
+              <span class="font-mono text-xs text-ink/40 pt-1">02</span>
+              <p class="leading-relaxed text-ink/70">
+                Built the Sales Management Information System (SIMAS) modules for the SDM Assessment Division,
+                including Pre-Add, Standard Sales, Tender, and Dashboard, strictly within a local development
+                environment (localhost).
+              </p>
+            </li>
+            <li class="grid grid-cols-[2.5rem_1fr] border-b border-ink/10 py-6">
+              <span class="font-mono text-xs text-ink/40 pt-1">03</span>
+              <p class="leading-relaxed text-ink/70">
+                Developed the frontend and backend using the MVC (Model-View-Controller) architecture with PHP,
+                CodeIgniter 3, MySQL, Bootstrap, HTML, CSS, and JavaScript (AJAX, jQuery).
+              </p>
+            </li>
+            <li class="grid grid-cols-[2.5rem_1fr] border-b border-ink/10 py-6">
+              <span class="font-mono text-xs text-ink/40 pt-1">04</span>
+              <p class="leading-relaxed text-ink/70">
+                Implemented critical backend business logic, including automatic document numbering to prevent
+                data duplication and race conditions using an atomic counter mechanism.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Galeri: 3 kolom, tinggi baris seragam -->
+        <div class="mt-20 flex items-baseline justify-between border-b border-ink/10 pb-4">
+          <p class="font-mono text-xs uppercase tracking-widest text-ink/50">SIMAS — Gallery</p>
+          <p class="font-mono text-xs text-ink/40">07 figures</p>
+        </div>
+
+        <div class="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          <figure class="lg:col-span-2">
+            <a href="assets/images/Halaman%20Utama%20Simas.png" target="_blank" class="frame h-64">
+              <img src="assets/images/Halaman%20Utama%20Simas.png" alt="SIMAS main page" loading="lazy"
+                   class="object-top" />
+            </a>
+            <figcaption class="caption">Fig. 01 — SIMAS Main Page</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/images/Dashboard%20Summary%20surat%20tender%20dan%20standar.png" target="_blank" class="frame h-64">
+              <img src="assets/images/Dashboard%20Summary%20surat%20tender%20dan%20standar.png" alt="Dashboard Summary Surat Tender & Standar"
+                   loading="lazy" class="object-contain p-3" />
+            </a>
+            <figcaption class="caption">Fig. 02 — Dashboard Summary</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/images/Dashboard%20Nilai%20Klien%20dan%20Kompetitor.png" target="_blank" class="frame h-64">
+              <img src="assets/images/Dashboard%20Nilai%20Klien%20dan%20Kompetitor.png" alt="Dashboard Nilai Klien & Kompetitor"
+                   loading="lazy" class="object-contain p-3" />
+            </a>
+            <figcaption class="caption">Fig. 03 — Client &amp; Competitor Value</figcaption>
+          </figure>
+          <figure class="lg:col-span-2">
+            <a href="assets/images/Dashboard%20Grafik%20penjualan.png" target="_blank" class="frame h-64">
+              <img src="assets/images/Dashboard%20Grafik%20penjualan.png" alt="SIMAS sales chart dashboard"
+                   loading="lazy" class="object-contain p-3" />
+            </a>
+            <figcaption class="caption">Fig. 04 — Sales Chart Dashboard</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/images/Simas2-Use%20Case%20usulan.drawio.png" target="_blank" class="frame h-64">
+              <img src="assets/images/Simas2-Use%20Case%20usulan.drawio.png" alt="Proposed Use Case Diagram for SIMAS"
+                   loading="lazy" class="object-contain p-3" />
+            </a>
+            <figcaption class="caption">Fig. 05 — Proposed Use Case</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/images/Sequence%20input%20data%20pre%20add.png" target="_blank" class="frame h-64">
+              <img src="assets/images/Sequence%20input%20data%20pre%20add.png" alt="Sequence diagram for Pre-Add data input"
+                   loading="lazy" class="object-top" />
+            </a>
+            <figcaption class="caption">Fig. 06 — Sequence (Pre-Add)</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/images/Sequence%20input%20data%20resmi.png" target="_blank" class="frame h-64">
+              <img src="assets/images/Sequence%20input%20data%20resmi.png" alt="Sequence diagram for official data input"
+                   loading="lazy" class="object-top" />
+            </a>
+            <figcaption class="caption">Fig. 07 — Sequence (Official Input)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03. SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="section-inner">
+        <p class="section-label">03 — Skills</p>
+        <h2 class="section-title">Tools I build with.</h2>
+
+        <div class="mt-16 grid border-l border-t border-ink/10 md:grid-cols-3">
+          <!-- Card 1 -->
+          <article class="skill-card">
+            <p class="skill-num font-mono text-xs">/01</p>
+            <h3 class="mt-16 text-2xl font-semibold tracking-tight">Backend &amp; Database</h3>
+            <ul class="mt-8 flex flex-wrap gap-2">
+              <li class="skill-item">PHP</li>
+              <li class="skill-item">CodeIgniter 3</li>
+              <li class="skill-item">MySQL</li>
+            </ul>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="skill-card">
+            <p class="skill-num font-mono text-xs">/02</p>
+            <h3 class="mt-16 text-2xl font-semibold tracking-tight">Frontend &amp; UI/UX</h3>
+            <ul class="mt-8 flex flex-wrap gap-2">
+              <li class="skill-item">HTML</li>
+              <li class="skill-item">CSS</li>
+              <li class="skill-item">Bootstrap</li>
+              <li class="skill-item">Tailwind CSS</li>
+              <li class="skill-item">JavaScript (AJAX, jQuery)</li>
+              <li class="skill-item">Figma</li>
+            </ul>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="skill-card">
+            <p class="skill-num font-mono text-xs">/03</p>
+            <h3 class="mt-16 text-2xl font-semibold tracking-tight">Tools &amp; Data</h3>
+            <ul class="mt-8 flex flex-wrap gap-2">
+              <li class="skill-item">Git</li>
+              <li class="skill-item">Pentaho Data Integration</li>
+              <li class="skill-item">Power BI</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04. PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="section-inner">
+        <p class="section-label">04 — Projects</p>
+        <h2 class="section-title">Selected Campus Project.</h2>
+
+        <div class="mt-16 grid gap-16 md:grid-cols-2 md:gap-10">
+          <!-- Project 1 -->
+          <article id="project-earthquake">
+            <a href="assets/images/Visual%20data%20Gempa%20Indonesia%202008-2023.png" target="_blank" class="frame aspect-[16/10]">
+              <img src="assets/images/Visual%20data%20Gempa%20Indonesia%202008-2023.png"
+                   alt="Indonesian earthquake data dashboard 2008–2023" loading="lazy" class="object-top" />
+            </a>
+            <div class="mt-8 flex items-baseline justify-between gap-4 border-b border-ink/10 pb-6">
+              <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">Earthquake Data Analysis (2008–2023)</h3>
+              <span class="font-mono text-xs text-ink/40">P/01</span>
+            </div>
+            <p class="mt-6 leading-relaxed text-ink/60">
+              Extracted and transformed Indonesian earthquake data using Pentaho Data Integration, visualized through
+              interactive dashboards to identify vulnerable regions.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="chip">Pentaho</span>
+              <span class="chip">Power BI</span>
+            </div>
+            <a href="https://docs.google.com/document/d/1r1QI_ba6Sk0ug80jP6HpmxFIElOuiMvgAocSA0lsyaA/edit?usp=sharing"
+               target="_blank" rel="noopener noreferrer" id="btn-earthquake-detail" class="btn-ghost mt-8 gap-3">
+              View Details <span aria-hidden="true" class="arrow">↗</span>
+            </a>
+          </article>
+
+          <!-- Project 2 -->
+          <article id="project-ikea">
+            <a href="assets/images/Redesign%20web%20Ikea%20halaman%20utama.png" target="_blank" class="frame aspect-[16/10]">
+              <img src="assets/images/Redesign%20web%20Ikea%20halaman%20utama.png"
+                   alt="IKEA e-commerce homepage redesign" loading="lazy" class="object-top" />
+            </a>
+            <div class="mt-8 flex items-baseline justify-between gap-4 border-b border-ink/10 pb-6">
+              <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">IKEA E-Commerce UI Redesign</h3>
+              <span class="font-mono text-xs text-ink/40">P/02</span>
+            </div>
+            <p class="mt-6 leading-relaxed text-ink/60">
+              Conducted usability evaluation and designed user-centric interface improvements tailored to target
+              user needs.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="chip">UI/UX Analysis</span>
+              <span class="chip">Figma</span>
+            </div>
+            <a href="https://docs.google.com/document/d/1hHaSVh9Hfl_aOkW7MIycxQkvKjLaWeY_Xg_0vx4GnkI/edit?usp=sharing"
+               target="_blank" rel="noopener noreferrer" id="btn-ikea-detail" class="btn-ghost mt-8 gap-3">
+              View Details <span aria-hidden="true" class="arrow">↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05. CONTACT ================= -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <p class="section-label">05 — Contact</p>
+
+        <div class="mt-12 grid gap-16 lg:grid-cols-12 lg:gap-12">
+          <div class="lg:col-span-5">
+            <h2 class="section-title !mt-0">Let's work<br />together.</h2>
+            <p class="mt-8 max-w-sm text-lg leading-relaxed text-ink/60">
+              Open to backend development and IT business analyst opportunities.
+            </p>
+            <a href="assets/docs/CV_Fuad%20Muhammad%20Pamungkas.pdf" download="CV_Fuad_Muhammad_Pamungkas.pdf"
+               target="_blank" rel="noopener" id="btn-download-cv" class="btn-primary mt-10 gap-3">
+              Download CV
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="lg:col-span-7 border-t border-ink/10">
+            <a href="mailto:fuadmp02@gmail.com" id="contact-email" class="link-row">
+              <span>Email</span>
+              <span class="link-meta">fuadmp02@gmail.com ↗</span>
+            </a>
+            <a href="https://wa.me/628121910327" target="_blank" rel="noopener noreferrer" id="contact-phone" class="link-row">
+              <span>Phone / WhatsApp</span>
+              <span class="link-meta">+62 812-1910-327 ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/fuadmuhammadpamungkas" target="_blank" rel="noopener noreferrer" id="contact-linkedin" class="link-row">
+              <span>LinkedIn</span>
+              <span class="link-meta">/in/fuadmuhammadpamungkas ↗</span>
+            </a>
+            <a href="https://github.com/FuadMuhammadP" target="_blank" rel="noopener noreferrer" id="contact-github" class="link-row">
+              <span>GitHub</span>
+              <span class="link-meta">@FuadMuhammadP ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-ink/10">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-8 font-mono text-xs text-ink/50 md:px-10">
+      <span>&copy; 2026 Fuad Muhammad Pamungkas</span>
+      <a href="#profile" id="back-to-top" class="hover:text-ink transition-colors">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ================= LIGHTBOX (preview + zoom gambar) ================= -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image preview">
+    <!-- Toolbar -->
+    <div class="lightbox-bar">
+      <p id="lightbox-caption" class="caption !mt-0 truncate"></p>
+      <div class="flex items-center gap-1">
+        <button type="button" id="zoom-out" class="lb-btn" aria-label="Zoom out">−</button>
+        <button type="button" id="zoom-reset" class="lb-btn min-w-[4.5rem]" aria-label="Reset zoom">100%</button>
+        <button type="button" id="zoom-in" class="lb-btn" aria-label="Zoom in">+</button>
+        <button type="button" id="lightbox-close" class="lb-btn ml-3" aria-label="Close preview">Close ✕</button>
+      </div>
+    </div>
+
+    <!-- Area gambar (bisa di-zoom & digeser) -->
+    <div id="lightbox-stage" class="lightbox-stage">
+      <img id="lightbox-img" src="" alt="" draggable="false" />
+    </div>
+
+    <p class="lightbox-hint">Scroll / pinch to zoom · Drag to pan · Double-click to zoom · Esc to close</p>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
