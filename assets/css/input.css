@@ -429,3 +429,121 @@
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ==========================================================
+   Print Stylesheet (Saat Save as PDF — persis seperti layar desktop)
+   ========================================================== */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm 12mm;
+  }
+
+  html, body {
+    background: var(--color-paper) !important;
+    color: var(--color-ink) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Sembunyikan hanya navbar sticky, footer, & lightbox popup */
+  header,
+  footer,
+  #lightbox,
+  .lightbox,
+  a.frame::after {
+    display: none !important;
+  }
+
+  /* Paksa semua Grid Desktop (md: & lg:) tetap aktif saat di-print,
+     meskipun lebar kertas A4 di bawah 1024px */
+  .md\:grid-cols-12,
+  .lg\:grid-cols-12 {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: 2rem !important;
+  }
+
+  .md\:col-span-7,
+  .lg\:col-span-7 {
+    grid-column: span 7 / span 7 !important;
+  }
+
+  .md\:col-span-5,
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5 !important;
+  }
+
+  .md\:grid-cols-3,
+  .lg\:grid-cols-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .md\:grid-cols-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2rem !important;
+  }
+
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2 !important;
+  }
+
+  /* Samakan ukuran gambar di galeri agar rapi dan tidak acak-acakan */
+  #profile .frame {
+    aspect-ratio: 4 / 5 !important;
+    max-height: 420px !important;
+  }
+
+  #experience .frame {
+    height: 140px !important;
+  }
+
+  #projects .frame {
+    aspect-ratio: 16 / 10 !important;
+    height: 200px !important;
+  }
+
+  /* Rapatkan jarak judul Projects agar kartu ikut muat di halaman yang sama */
+  #projects .mt-16.grid {
+    margin-top: 1rem !important;
+  }
+
+  /* Setiap section rapi tanpa memaksa tinggi 100vh */
+  .section {
+    min-height: 0 !important;
+    height: auto !important;
+    display: block !important;
+    page-break-before: always;
+    break-before: page;
+  }
+
+  #profile.section {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
+  .section-inner {
+    padding: 1.5rem 0 !important;
+    max-width: 100% !important;
+  }
+
+  .section-title {
+    font-size: 2.25rem !important;
+    margin-top: 0.75rem !important;
+  }
+
+  #profile h1 {
+    font-size: 3.5rem !important;
+  }
+
+  /* Cegah kartu atau gambar terbelah di pergantian halaman */
+  figure,
+  article,
+  .skill-card,
+  li {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
